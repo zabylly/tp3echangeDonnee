@@ -22,11 +22,11 @@ export default class CollectionFilter{
                 });
             }
         });
-        if(keys.includes("field"))
+        if(keys.includes("fields"))
         {
-            let keys = this.params["field"].split(",");
+            let keys = this.params["fields"].split(",");
 
-            objects = this.sortBy(this.getFields(objects,this.params["field"]),this.params["field"]);
+            objects = this.sortBy(this.getFields(objects,this.params["fields"]),this.params["fields"]);
             let positionInDouble =[];
             let previousObject=objects[0];
             //trouver les doublons
